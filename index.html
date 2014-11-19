@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InvoiceKit</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<div class="control-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-2-4">
+        <div class="slogan">InvoiceKit</div>
+
+        <label for="config_tax">MwSt:
+          <input type="checkbox" id="config_tax" />
+        </label>
+        <label for="config_tax_rate" class="taxrelated">Rate:
+          <input type="text" id="config_tax_rate" value="19"/>%
+        </label>
+        <label for="config_note">Anmerkung:
+          <input type="checkbox" id="config_note" />
+        </label>
+        <label for="config_date">Leistungsdatum:
+          <input type="checkbox" id="config_date" />
+        </label>
+      </div>
+      <div class="col-4 text-right">
+        <a href="javascript:window.print()">Drucken</a>
+      </div><!--.col-->
+    </div><!--.row-->
+  </div><!--.container-->
+</div><!--.control-bar-->
+
+<header class="row">
+  <div class="logoholder text-center" contenteditable>
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" viewBox="0 0 40 35" version="1.1" xml:space="preserve" style="clip-rule:evenodd;fill-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421"><path d="M0.892549 17.4914C0.892549 15.4277 8.6513 1.9891 10.4385 0.957249 12.2257-0.074605 27.7432-0.074605 29.5305 0.957249 31.3177 1.9891 39.0764 15.4277 39.0764 17.4914 39.0764 19.5551 31.3177 32.9936 29.5305 34.0255 27.7432 35.0573 12.2257 35.0573 10.4385 34.0255 8.6513 32.9936 0.892549 19.5551 0.892549 17.4914ZM17.1714 15.4337C17.2068 15.3566 17.7619 13.6242 20.2278 12.5858 20.9639 12.2758 21.746 12.1209 22.5742 12.1209 23.4023 12.1209 24.1844 12.2758 24.9206 12.5858 25.6567 12.8958 26.2979 13.3185 26.8443 13.8539 27.3906 14.3894 27.822 15.0178 28.1383 15.7392 28.4546 16.4606 28.6127 17.2271 28.6127 18.0387 28.6127 18.8503 28.4546 19.6168 28.1383 20.3382 27.822 21.0596 27.3906 21.688 26.8443 22.2234 26.2979 22.7588 25.6567 23.1815 24.9206 23.4915 24.1844 23.8015 23.4023 23.9565 22.5742 23.9565 21.746 23.9565 20.9639 23.8015 20.2278 23.4915 19.5951 23.2251 19.0326 22.8755 18.452 22.363L17.9745 23.6691 14.9898 23.6691 10.504 12.3914 14.5239 12.3914 16.4735 17.2947 17.171 15.4335 17.1714 15.4337ZM21.6339 15.8575C20.5056 16.3345 20.1587 17.2332 20.1587 18.0387 20.1587 18.3656 20.222 18.6727 20.3485 18.9602 20.475 19.2476 20.6476 19.4984 20.8661 19.7126 21.0847 19.9267 21.3406 20.0958 21.6339 20.2198 21.9272 20.3438 22.2406 20.4058 22.5742 20.4058 22.9077 20.4058 23.2212 20.3438 23.5145 20.2198 23.8078 20.0958 24.0637 19.9267 24.2822 19.7126 24.5008 19.4984 24.6733 19.2476 24.7998 18.9602 24.9263 18.6727 24.9896 18.3656 24.9896 18.0387 24.9896 17.7118 24.9263 17.4046 24.7998 17.1172 24.6733 16.8297 24.5008 16.5789 24.2822 16.3648 24.0637 16.1506 23.8078 15.9815 23.5145 15.8575 23.2212 15.7335 22.9077 15.6715 22.5742 15.6715 22.2406 15.6715 21.9272 15.7335 21.6339 15.8575Z"/></svg><!--.logo-->
+  </div><!--.logoholder-->
+
+  <div class="me">
+    <p contenteditable>
+      <strong>Volker Otto – Web Architect</strong><br>
+      Straße Nr<br>
+      22850 Norderstedt<br>
+      Deutschland
+    </p>
+  </div><!--.me-->
+
+  <div class="info">
+    <p contenteditable>
+      Web: <a href="http://volkerotto.net">www.volkerotto.net</a><br>
+      Mail: <a href="mailto:hello@volkerotto.net">hello@volkerotto.net</a><br>
+      Tel: +49 (0)157 xxx 121 65<br>
+      Twitter: @hellovolker
+    </p>
+  </div><!-- .info -->
+
+  <div class="bank">
+    <p contenteditable>
+      Bankverbindung: <br>
+      Kontoinhaber: <br>
+      IBAN: <br>
+      BIC:
+    </p>
+  </div><!--.bank-->
+
+</header>
+
+
+<div class="row section">
+  
+  <div class="col-1">
+    <p contenteditable class="smallme">
+        Volker Otto · Straße Nr · 22850 Norderstedt
+    </p>
+
+    <p contenteditable class="client">
+      <strong>Firma GmbH</strong><br>
+      Straße Nr<br>
+      22850 Stadt
+    </p>
+  </div><!--.col-->
+
+  <div class="col-2">
+    <h1 contenteditable>Rechnung</h1>
+  </div><!--.col-->
+  
+  <div class="col-2 text-right details">
+    <p contenteditable>
+      Rechnungsdatum: <input type="text" class="datePicker" /><br>
+      Rechnungsnummer: <input type="text" value="#" /><br>
+      Zahlbar bis: <input class="twoweeks" type="text"/>
+    </p>
+  </div><!--.col-->
+
+</div><!--.row-->
+
+<div class="invoicelist-body">
+  <table>
+    <thead contenteditable>
+      <th>Leistung</th>
+      <th>Beschreibung</th>
+      <th class="daterelated">Datum</th>
+      <th width="10%">Anzahl</th>
+      <th width="12%">Rate</th>
+      <th class="taxrelated">MwSt</th>
+      <th width="10%">Preis</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="control removeRow" href="#">x</a> <span contenteditable>Leistung</span></td>
+        <td><span contenteditable>Beschreibung</span></td>
+        <td class="daterelated"><span contenteditable>Datum</span></td>
+        <td class="amount"><input type="text" value="1"/></td>
+        <td class="rate"><input type="text" value="60" /></td>
+        <td class="tax taxrelated"></td>
+        <td class="sum"></td>
+      </tr>
+    </tbody>
+  </table>
+  <a class="control newRow" href="#">+ New ROW</a>
+</div><!--.invoice-body-->
+
+<div class="invoicelist-footer">
+  <table contenteditable>
+    <tr class="taxrelated">
+      <td>MwSt:</td>
+      <td id="total_tax"></td>
+    </tr>
+    <tr>
+      <td><strong>Gesamt:</strong></td>
+      <td id="total_price"></td>
+    </tr>
+  </table>
+</div>
+
+<div class="note" contenteditable>
+  <h2>Anmerkung:</h2>
+</div><!--.note-->
+
+<footer class="row">
+  <div class="col-1 text-center">
+    <p class="notaxrelated" contenteditable>Gemäß § 19 UStG enthält der Rechnungsbetrag keine Umsatzsteuer.</p>
+    <p contenteditable class="notdaterelated">
+      Leisungsdatum entspricht Rechnungsdatum.
+    </p>
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+<script src="assets/js/min/main-min.js"></script>
+</body>
+</html>

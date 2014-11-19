@@ -1,0 +1,422 @@
+@import '_normalize';
+
+$primary: #F14C4C;
+
+/**
+ * BASIC STYLE
+ */
+html{
+  font-size: 12px;
+  line-height: 1.5;
+  color: #000;
+  background: #ddd;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  margin: 6rem auto 0;
+  max-width: 800px;
+  background: white;
+  border: 1px solid #aaa;
+  padding: 2rem;
+}
+.container{
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+*,*:before,*:after{
+  box-sizing: inherit;
+}
+
+[contenteditable],
+input{
+  &:hover,
+  &:focus{
+    background: rgba($primary,.1);
+    outline: 2px solid $primary;
+  }
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a{
+  color: $primary;
+  text-decoration: none;
+}
+
+p{
+  margin: 0;
+}
+
+/**
+* Small Grid
+**/ 
+.row{
+  @extend .group;
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 0;
+}
+.col,
+[class*="col-"]{
+  vertical-align: top;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0 1rem;
+  min-height: 1px;
+}
+.col-4{
+  width: 25%;
+}
+.col-3{
+  width: 33.33%;
+}
+.col-2{
+  width: 50%;
+}
+.col-2-4{
+  width: 75%;
+}
+.col-1{
+  width: 100%;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+
+
+/**
+ * CONTROL TOP BAR
+ */
+.control-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: $primary;
+  color: white;
+  line-height: 4rem;
+  height: 4rem;
+  
+  .slogan{
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-right: 2rem;
+  }
+  
+  label{
+    margin-right: 1rem;
+  }
+  
+  a{
+    margin: 0;
+    padding: .5em 1em;
+    background: rgba(white,.8);
+    &:hover{
+      background: rgba(white,1);
+    }
+  }
+  input{
+    border: none;
+    background: rgba(white,.2);
+    padding: .5rem 0;
+    max-width: 30px;
+    text-align: center;
+    
+    &:hover{
+      background: rgba(white,.3);
+    }
+  }
+}
+
+/**
+ * TOGGLE OPTIONS
+ */
+.hidetax{
+  .taxrelated{
+    display: none;
+  }
+}
+.showtax{
+  .notaxrelated{
+    display: none;
+  }
+}
+.hidedate{
+  .daterelated{
+    display: none;
+  }
+}
+.showdate{
+  .notdaterelated{
+    display: none;
+  }
+}
+
+
+/**
+ * HEADER
+ */
+header{
+  margin: 1rem 0 0;
+  padding: 0 0 2rem 0;
+  border-bottom: 3pt solid $primary;
+  
+  p{
+    font-size: .9rem;
+  }
+  
+  a{
+    color: #000;
+  }
+}
+.logo{
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  border: none;
+  fill: $primary;
+}
+.logoholder{
+  @extend .col;
+  width: 10%;
+}
+.me{
+  @extend .col;
+  width: 30%;
+}
+.info{
+  @extend .col;
+  width: 30%;
+}
+.bank{
+  @extend .col;
+  width: 30%;
+  //color: #666;
+  //p{font-size: .8rem}
+}
+
+/**
+ * SECTION
+ */
+.section{
+  margin: 3rem 0 0;
+}
+.smallme{
+  display: inline-block;
+  text-transform: uppercase;
+  //border-bottom: 1pt solid black;
+  margin: 0 0 2rem 0;
+  font-size: .9rem;
+}
+.client{
+  margin: 0 0 3rem 0;
+}
+h1{
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  //font-weight: normal;  
+  //text-transform: uppercase;
+  color: $primary;
+  //border-top: 3pt solid #999;
+}
+
+.details{
+  input{
+    display: inline;
+    margin: 0 0 0 .5rem;
+    border: none;
+    width: 50px;
+    min-width: 0;
+    background: transparent;
+    text-align: left;
+  }
+}
+
+
+// CURRENCY Symbol
+.rate,
+.price,
+.sum,
+.tax,
+#total_price,
+#total_tax{
+  &:before{
+    content: '€';
+  }
+}
+
+/**
+ * INVOICELIST BODY
+ */
+.invoicelist-body{
+  margin: 1rem;
+
+  table{
+    width: 100%;
+  }
+  thead{
+    text-align: left;
+    border-bottom: 1pt solid #666;
+    //color: $primary;
+  }
+  td,th{
+    position: relative;
+    padding: 1rem;
+  }
+  tr:nth-child(even){
+    background: #ccc;
+  }
+  tr{
+    &:hover{
+      .removeRow{
+        display: block;
+      }
+    }
+  }
+  
+  input{
+    display: inline;
+    margin: 0;
+    border: none;
+    width: 80%;
+    min-width: 0;
+    background: transparent;
+    text-align: left;
+  }
+  .control{
+    display: inline-block;
+    color: white;
+    background: $primary;
+    padding: 3px 7px;
+    font-size: .9rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover{
+      background: lighten($primary,5%);
+    }
+  }
+  .newRow{
+    margin: .5rem 0;
+    float: left;
+  }
+  .removeRow{
+    display: none;
+    position: absolute;
+    top: .1rem;
+    bottom: .1rem;
+    left: -1.3rem;
+    font-size: .7rem;
+    border-radius: 3px 0 0 3px;
+    padding: .5rem;
+  }
+}
+
+/**
+ * INVOICE LIST FOOTER
+ */
+.invoicelist-footer{
+  @extend .group;
+  margin: 1rem;
+  
+  table{
+    //border-top: 2pt solid #666;
+    float: right;
+    //background: #ccc;
+    width: 25%;
+    
+    td{
+      padding: 1rem 2rem 0 1rem;
+      text-align: right;
+    }
+    tr:nth-child(2){
+      td{
+        padding-top: 0;
+      }
+    }
+    #total_price{
+      //font-weight: bold;
+      font-size: 2rem;
+      color: $primary;
+    }
+  }
+}
+
+/**
+ * NOTE
+ */
+.note{
+  margin: 1rem;
+  
+  .hidenote & {
+    display: none;
+  }
+
+  h2{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  p{
+    //background: #ccc;
+    //padding: 1rem;
+  }
+}
+
+/**
+ * FOOTER
+ */
+footer{
+  display: block;
+  margin: 1rem 0;
+  padding: 1rem 0 0;
+  
+  p{
+    font-size: .8rem;
+  }
+}
+
+
+/**
+ * PRINT STYLE
+ */
+@media print {
+  html{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+  body{
+    width: 100%;
+    border: none;
+    background: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  .control,
+  .control-bar{
+    display: none !important;
+  }
+
+  [contenteditable] {
+    &:hover,
+    &:focus{
+      outline: none;
+    }
+  }
+}
